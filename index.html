@@ -11,7 +11,6 @@
         /* Header / Hero Section */
         header { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: white; padding: 50px 20px; text-align: center; }
         
-        /* Styling Foto Profil */
         .profile-img {
             width: 130px;
             height: 130px;
@@ -35,12 +34,13 @@
         .skills-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
         .skill-badge { background-color: #eef2f3; color: #2c5364; padding: 6px 14px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; }
         
-        /* Project List */
-        .project-card { border-left: 4px solid #00d2ff; padding-left: 15px; margin-bottom: 25px; }
-        .project-card h3 { color: #333; margin-bottom: 5px; }
-        .project-tech { font-size: 0.85rem; color: #666; font-style: italic; margin-bottom: 8px; }
+        /* Lists Styling */
+        .item-card { border-left: 4px solid #00d2ff; padding-left: 15px; margin-bottom: 25px; }
+        .item-card h3 { color: #333; margin-bottom: 5px; }
+        .item-sub { font-size: 0.9rem; color: #666; font-weight: bold; margin-bottom: 8px; }
+        .item-tech { font-size: 0.85rem; color: #00a8cc; font-style: italic; margin-bottom: 8px; }
         
-        /* Contact Buttons yang Bisa Diklik */
+        /* Contact Buttons */
         .contact-links { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 15px; }
         .btn-contact {
             display: inline-block;
@@ -61,52 +61,85 @@
     <header>
         <img src="foto-profil.jpg" alt="Foto Fauzy Muhamad Syaban" class="profile-img">
         <h1>Fauzy Muhamad Syaban</h1>
-        <p>Electrical Engineering Student | Embedded Systems & IoT Enthusiast</p>
+        <p>S1 Teknik Elektro Student at Telkom University | Embedded Systems & IoT Enthusiast</p>
     </header>
 
     <div class="container">
         
         <section id="about">
             <h2>Tentang Saya</h2>
-            <p>Saya adalah mahasiswa S1 Teknik Elektro di Universitas Telkom yang memiliki ketertarikan kuat di bidang <b>Embedded Systems, Internet of Things (IoT), dan elektronika praktis</b>. Saya berpengalaman dalam memprogram berbagai mikrokontroler, merancang PCB, serta mengintegrasikan sistem perangkat keras dengan aplikasi digital.</p>
+            <p>Saya adalah mahasiswa S1 Teknik Elektro di Universitas Telkom dengan minat kuat pada bidang Internet of Things (IoT), embedded system, dan pengembangan perangkat elektronik. Saya memiliki pengalaman dalam troubleshooting hardware, pengembangan sistem berbasis mikrokontroler, serta penggunaan berbagai alat ukur elektronika presisi.</p>
+        </section>
+
+        <section id="education">
+            <h2>Pendidikan</h2>
+            <div class="item-card">
+                <h3>Universitas Telkom</h3>
+                <p class="item-sub">S1 Teknik Elektro (Sept 2023 - Sekarang)</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Pengalaman Kerja & Organisasi</h2>
+            
+            <div class="item-card">
+                <h3>Asisten Laboratorium Elektronika | Divisi Praktikum</h3>
+                <p class="item-sub">Jan 2026 - Sekarang</p>
+                <p>Bertanggung jawab atas kalibrasi dan kesiapan alat ukur presisi (Oscilloscope, Function Generator, Multimeter). Mendampingi praktikan dalam pemahaman konsep elektronika serta memberikan asistensi teknis dan solusi perbaikan sirkuit.</p>
+            </div>
+
+            <div class="item-card">
+                <h3>Freelance | Perbaikan Laptop dan Handphone</h3>
+                <p class="item-sub">Agust 2022 - Sekarang</p>
+                <p>Melakukan analisis kerusakan sirkuit, perbaikan komponen motherboard, serta menerapkan teknik soldering dan desoldering presisi tinggi pada perangkat keras.</p>
+            </div>
+
+            <div class="item-card">
+                <h3>Volunter | Run for Roots | Logistik</h3>
+                <p class="item-sub">Nov 2025 - Des 2025</p>
+                <p>Mengelola distribusi dan inventaris perlengkapan acara serta menangani kendala teknis di lapangan secara cepat dan taktis.</p>
+            </div>
         </section>
 
         <section id="skills">
             <h2>Keahlian & Tools</h2>
             <div class="skills-container">
                 <span class="skill-badge">Mikrokontroler (ESP32, ESP8266, Arduino)</span>
-                <span class="skill-badge">C / C++</span>
-                <span class="skill-badge">Desain PCB (KiCad)</span>
+                <span class="skill-badge">Desain PCB (KiCad, EasyEDA)</span>
+                <span class="skill-badge">Alat Ukur (Oscilloscope, Function Generator, Multimeter)</span>
+                <span class="skill-badge">Model 3D CAD</span>
+                <span class="skill-badge">Troubleshooting Hardware</span>
+                <span class="skill-badge">Soldering & Desoldering</span>
                 <span class="skill-badge">Internet of Things (IoT)</span>
                 <span class="skill-badge">Flutter (Mobile Development)</span>
-                <span class="skill-badge">Troubleshooting & Soldering</span>
+                <span class="skill-badge">K3 Listrik Awareness</span>
             </div>
         </section>
 
         <section id="projects">
-            <h2>Proyek Terbaru</h2>
+            <h2>Proyek Portofolio</h2>
             
-            <div class="project-card">
+            <div class="item-card">
                 <h3>1. Sistem Pemantauan Parkir Pintar (Smart Parking)</h3>
-                <p class="project-tech">Teknologi: IoT, Sensor, Komunikasi Data</p>
+                <p class="item-tech">Teknologi: IoT, Sensor, Komunikasi Data</p>
                 <p>Mengembangkan prototipe sistem monitoring slot parkir secara real-time untuk area gedung kuliah, mempermudah pengguna menemukan tempat parkir yang kosong melalui sistem digital.</p>
             </div>
 
-            <div class="project-card">
+            <div class="item-card">
                 <h3>2. Alat Pelacak & Sinyal Darurat Pendaki Gunung Berbasis LoRa</h3>
-                <p class="project-tech">Teknologi: LoRa Technology, GPS Module, Embedded System</p>
+                <p class="item-tech">Teknologi: LoRa Technology, GPS Module, Embedded System</p>
                 <p>Merancang perangkat keras penentu posisi berbasis GPS dengan transmisi data jarak jauh menggunakan modul LoRa, ditujukan untuk keamanan pendaki di area yang minim sinyal seluler.</p>
             </div>
 
-            <div class="project-card">
+            <div class="item-card">
                 <h3>3. Game Snake Terkontrol Smartphone via BLE</h3>
-                <p class="project-tech">Teknologi: ESP32, Bluetooth Low Energy (BLE), Flutter</p>
+                <p class="item-tech">Teknologi: ESP32, Bluetooth Low Energy (BLE), Flutter</p>
                 <p>Membuat sistem game interaktif di mana perangkat keras ESP32 berfungsi sebagai pemroses utama yang dikendalikan secara nirkabel melalui aplikasi mobile berbasis Flutter memanfaatkan koneksi BLE.</p>
             </div>
 
-            <div class="project-card">
+            <div class="item-card">
                 <h3>4. Desain Multi-Output Fixed Power Supply PCB</h3>
-                <p class="project-tech">Teknologi: KiCad, Elektronika Daya, Buck Converter</p>
+                <p class="item-tech">Teknologi: KiCad, Elektronika Daya, Buck Converter</p>
                 <p>Merancang jalur skematik dan tata letak komponen (layout) PCB untuk modul catu daya dengan keluaran tetap 3.3V, 5V, dan 9V yang efisien menggunakan regulasi tegangan yang aman.</p>
             </div>
         </section>
@@ -115,10 +148,8 @@
             <h2>Hubungi Saya</h2>
             <p>Saya terbuka untuk kolaborasi proyek, diskusi teknis, maupun kesempatan magang/kerja. Silakan hubungi saya melalui tombol di bawah ini:</p>
             <div class="contact-links">
-                <a href="mailto:emailmu@gmail.com" class="btn-contact">📧 Email Saya</a>
-                
-                <a href="https://linkedin.com/in/username-mu" target="_blank" class="btn-contact">💼 LinkedIn</a>
-                
+                <a href="mailto:fauzysyaban@gmail.com" class="btn-contact">📧 Email Saya</a>
+                <a href="https://linkedin.com/in/fauzysyaban" target="_blank" class="btn-contact">💼 LinkedIn</a>
                 <a href="https://github.com/fauzysyaban" target="_blank" class="btn-contact">🐙 GitHub</a>
             </div>
         </section>
