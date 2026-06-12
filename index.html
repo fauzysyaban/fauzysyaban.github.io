@@ -3,20 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Saya</title>
+    <title>Portofolio | Fauzy Muhamad Syaban</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-color: #f4f4f9; color: #333; }
-        .container { max-width: 600px; margin: 0 auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        h1 { color: #007acc; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; }
+        
+        /* Header / Hero Section */
+        header { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: white; padding: 60px 20px; text-align: center; }
+        header h1 { font-size: 2.5rem; margin-bottom: 10px; letter-spacing: 1px; }
+        header p { font-size: 1.2rem; color: #00d2ff; font-weight: 300; }
+        
+        .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
+        
+        /* Card Section */
+        section { background: white; padding: 30px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        section h2 { color: #2c5364; border-bottom: 2px solid #00d2ff; padding-bottom: 8px; margin-bottom: 20px; }
+        
+        /* Skill Badges */
+        .skills-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+        .skill-badge { background-color: #eef2f3; color: #2c5364; padding: 6px 14px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; }
+        
+        /* Project List */
+        .project-card { border-left: 4px solid #00d2ff; padding-left: 15px; margin-bottom: 25px; }
+        .project-card h3 { color: #333; margin-bottom: 5px; }
+        .project-tech { font-size: 0.85rem; color: #666; font-style: italic; margin-bottom: 8px; }
+        
+        /* Contact Links */
+        .contact-links { display: flex; gap: 20px; font-size: 1.1rem; }
+        .contact-links a { color: #2c5364; text-decoration: none; font-weight: bold; }
+        .contact-links a:hover { color: #00d2ff; }
     </style>
 </head>
 <body>
+
+    <header>
+        <h1>Fauzy Muhamad Syaban</h1>
+        <p>Electrical Engineering Student | Embedded Systems & IoT Enthusiast</p>
+    </header>
+
     <div class="container">
-        <h1>Halo, Selamat Datang!</h1>
-        <p>Saya adalah seorang mahasiswa teknik yang tertarik dengan pengembangan teknologi, embedded systems, dan elektronika.</p>
-        <hr>
-        <h3>Proyek Saya:</h3>
-        <p>Segera hadir...</p>
+        
+        <section id="about">
+            <h2>Tentang Saya</h2>
+            <p>Saya adalah mahasiswa S1 Teknik Elektro di Universitas Telkom yang memiliki ketertarikan kuat di bidang <b>Embedded Systems, Internet of Things (IoT), dan elektronika praktis</b>. Saya berpengalaman dalam memprogram berbagai mikrokontroler, merancang PCB, serta mengintegrasikan sistem perangkat keras dengan aplikasi digital.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Keahlian & Tools</h2>
+            <div class="skills-container">
+                <span class="skill-badge">Mikrokontroler (ESP32, ESP8266, Arduino)</span>
+                <span class="skill-badge">C / C++</span>
+                <span class="skill-badge">Desain PCB (KiCad)</span>
+                <span class="skill-badge">Internet of Things (IoT)</span>
+                <span class="skill-badge">Flutter (Mobile Development)</span>
+                <span class="skill-badge">Troubleshooting & Soldering</span>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Proyek Terbaru</h2>
+            
+            <div class="project-card">
+                <h3>1. Sistem Pemantauan Parkir Pintar (Smart Parking)</h3>
+                <p class="project-tech">Teknologi: IoT, Sensor, Komunikasi Data</p>
+                <p>Mengembangkan prototipe sistem monitoring slot parkir secara real-time untuk area gedung kuliah, mempermudah pengguna menemukan tempat parkir yang kosong melalui sistem digital.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>2. Alat Pelacak & Sinyal Darurat Pendaki Gunung Berbasis LoRa</h3>
+                <p class="project-tech">Teknologi: LoRa Technology, GPS Module, Embedded System</p>
+                <p>Merancang perangkat keras penentu posisi berbasis GPS dengan transmisi data jarak jauh menggunakan modul LoRa, ditujukan untuk keamanan pendaki di area yang minim sinyal seluler.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>3. Game Snake Terkontrol Smartphone via BLE</h3>
+                <p class="project-tech">Teknologi: ESP32, Bluetooth Low Energy (BLE), Flutter</p>
+                <p>Membuat sistem game interaktif di mana perangkat keras ESP32 berfungsi sebagai pemroses utama yang dikendalikan secara nirkabel melalui aplikasi mobile berbasis Flutter memanfaatkan koneksi BLE.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>4. Desain Multi-Output Fixed Power Supply PCB</h3>
+                <p class="project-tech">Teknologi: KiCad, Elektronika Daya, Buck Converter</p>
+                <p>Merancang jalur skematik dan tata letak komponen (layout) PCB untuk modul catu daya dengan keluaran tetap 3.3V, 5V, dan 9V yang efisien menggunakan regulasi tegangan yang aman.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Hubungi Saya</h2>
+            <p style="margin-bottom: 15px;">Saya terbuka untuk kolaborasi proyek, diskusi teknis, maupun kesempatan magang/kerja.</p>
+            <div class="contact-links">
+                <a href="mailto:emailmu@gmail.com">📧 Email</a>
+                <a href="https://linkedin.com/in/username-mu" target="_blank">💼 LinkedIn</a>
+                <a href="https://github.com/fauzysyaban" target="_blank">🐙 GitHub</a>
+            </div>
+        </section>
+
     </div>
+
 </body>
 </html>
